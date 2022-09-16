@@ -12,7 +12,9 @@ describe("DMCToken contract", function () {
 
         const ownerBalance = await deployedToken.balanceOf(owner.address);
 
-        expect(await deployedToken.totalSupply()).to.equal(ownerBalance);
+
+
+       expect(await deployedToken.totalSupply().value).to.equal(ownerBalance.value);
 
     });
 });
