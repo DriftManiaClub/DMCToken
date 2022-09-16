@@ -8,7 +8,7 @@ async function main() {
     console.log("Upgrading DMCTokenV2...");
 
     await upgrades.upgradeProxy(
-        "0xFF26c6C30fc67d45f8db06c88EE0465D9BBa6b07",
+        "0xC81017e4AbA0C6633EE7302E738878dd509a2bB3",
         DMCTokenV2
     );
     console.log("Upgraded Successfully");
