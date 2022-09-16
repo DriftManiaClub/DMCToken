@@ -7,7 +7,7 @@ async function main() {
     const DMCToken = await ethers.getContractFactory("DMCToken");
     const token = await upgrades.deployProxy(DMCToken, [], {
         initializer: "initialize",
-        kind: "uups",
+        kind: "transparent",
     });
 
     const deployedToken = await token.deployed();

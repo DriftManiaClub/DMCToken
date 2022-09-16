@@ -1,16 +1,14 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.13;
+pragma solidity ^0.8.4;
 
 import "@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol";
 import "@openzeppelin/contracts-upgradeable/token/ERC20/extensions/ERC20BurnableUpgradeable.sol";
 import "@openzeppelin/contracts-upgradeable/security/PausableUpgradeable.sol";
 import "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol";
 import "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
-import "@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol";
 
-/// @custom:security-contact security@driftmania.club
-contract DMCToken is Initializable, ERC20Upgradeable, ERC20BurnableUpgradeable, PausableUpgradeable, OwnableUpgradeable, UUPSUpgradeable {
-
+/// @custom:security-contact dev@driftmania.club
+contract DMCToken is Initializable, ERC20Upgradeable, ERC20BurnableUpgradeable, PausableUpgradeable, OwnableUpgradeable {
     /// @custom:oz-upgrades-unsafe-allow constructor
     constructor() {
         _disableInitializers();
@@ -21,7 +19,6 @@ contract DMCToken is Initializable, ERC20Upgradeable, ERC20BurnableUpgradeable, 
         __ERC20Burnable_init();
         __Pausable_init();
         __Ownable_init();
-        __UUPSUpgradeable_init();
 
         _mint(msg.sender, 1000000 * 10 ** decimals());
     }
@@ -40,9 +37,5 @@ contract DMCToken is Initializable, ERC20Upgradeable, ERC20BurnableUpgradeable, 
 
     function _beforeTokenTransfer(address from, address to, uint256 amount) internal whenNotPaused override {
         super._beforeTokenTransfer(from, to, amount);
-    }
-
-    function _authorizeUpgrade(address newImplementation) internal onlyOwner override {
-
     }
 }
