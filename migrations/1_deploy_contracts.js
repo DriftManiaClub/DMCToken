@@ -1,8 +1,17 @@
-const { deployProxy } = require('@openzeppelin/truffle-upgrades');
 
-const DriftManiaClub = artifacts.require('DriftManiaClub');
 
-module.exports = async function (deployer) {
-  const instance = await deployProxy(DriftManiaClub, [], { deployer });
-  console.log('Deployed', instance.address);
-};
+async function main () {
+  // We get the contract to deploy
+  const DriftManiaClub = await ethers.getContractFactory('DriftManiaClub');
+  console.log('Deploying DriftManiaClub...');
+  const dmcDeploy = await DriftManiaClub.deploy();
+  await dmcDeploy.deployed();
+  console.log('DriftManiaClub deployed to:', dmcDeploy.address);
+}
+
+main()
+    .then(() => process.exit(0))
+    .catch(error => {
+      console.error(error);
+      process.exit(1);
+    });

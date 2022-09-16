@@ -29,7 +29,11 @@
   "homepage": "https://github.com/DriftManiaClub/DMCToken#readme",
   "description": "",
   "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^2.0.0",
     "add": "^2.0.6",
+    "hardhat": "^2.11.2",
+    "install": "^0.13.0",
+    "npm": "^8.19.2",
     "truffle-plugin-verify": "^0.5.28",
     "yarn": "^1.22.19"
   }
