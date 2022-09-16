@@ -5,7 +5,10 @@ async function main() {
     const [owner] = await ethers.getSigners();
 
     const DMCToken = await ethers.getContractFactory("DMCToken");
-    const token = await upgrades.deployProxy(DMCToken, []);
+    const token = await upgrades.deployProxy(DMCToken, [], {
+        initializer: "initialize",
+        kind: "uups",
+    });
 
     const deployedToken = await token.deployed();
     const ownerBalance = await deployedToken.balanceOf(owner.address);
