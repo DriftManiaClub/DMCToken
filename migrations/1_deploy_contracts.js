@@ -1,6 +1,8 @@
-const DriftManiaClub = artifacts.require("DriftManiaClub");
 const { deployProxy } = require('@openzeppelin/truffle-upgrades');
 
+const DriftManiaClub = artifacts.require('DriftManiaClub');
+
 module.exports = async function (deployer) {
-  await deployProxy(DriftManiaClub, [], { deployer, initializer: 'initialize' });
+  const instance = await deployProxy(DriftManiaClub, [], { deployer });
+  console.log('Deployed', instance.address);
 };

@@ -19530,7 +19530,7 @@
         }
       },
       "links": {},
-      "address": "0xF3bA35622eA0aD6b1833Ff8FD4a4c4111D6Cf419",
+      "address": "0x9f81FC5B439181F45C6eB5BcA11Aba61Ef2799F0",
       "transactionHash": "0x1acfe241c222147174d80ce560686f1fe54ef5eccf562fb83c6b27efb4fa755b"
     },
     "80001": {
@@ -19541,7 +19541,7 @@
     }
   },
   "schemaVersion": "3.4.10",
-  "updatedAt": "2022-09-16T17:00:35.269Z",
+  "updatedAt": "2022-09-16T17:09:07.075Z",
   "networkType": "ethereum",
   "devdoc": {
     "custom:security-contact": "security@driftmania.club",
