@@ -19536,12 +19536,12 @@
     "80001": {
       "events": {},
       "links": {},
-      "address": "0x5c111eb51CDf22CD86C86a3d1BA44D3d1C180346",
+      "address": "0x058f425027436C353d61095F46C89b8EeBE26393",
       "transactionHash": "0x90f179ec1dd44df34c65f1dafb0659c6a29aa73226271b054001df02aff9a661"
     }
   },
   "schemaVersion": "3.4.10",
-  "updatedAt": "2022-09-16T16:32:21.835Z",
+  "updatedAt": "2022-09-16T17:00:35.269Z",
   "networkType": "ethereum",
   "devdoc": {
     "custom:security-contact": "security@driftmania.club",
