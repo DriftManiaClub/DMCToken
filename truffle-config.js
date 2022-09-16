@@ -19,9 +19,11 @@
  */
 
 //  truffle migrate  --network matic
+// truffle run verify DriftManiaClub --network matic
 
 require('dotenv').config();
 const mnemonic = process.env["MNEMONIC"];
+const polygonApi = process.env["POLYGON_API"];
 // const infuraProjectId = process.env["INFURA_PROJECT_ID"];
  
 const HDWalletProvider = require('@truffle/hdwallet-provider');
@@ -75,5 +77,11 @@ module.exports = {
     solc: {
       version: "0.8.13",      // Fetch exact version from solc-bin
     }
+  },
+  plugins: [
+    'truffle-plugin-verify'
+  ],
+  api_keys: {
+    polygonscan: polygonApi,
   }
 };
