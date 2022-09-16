@@ -1,10 +1,17 @@
 const { ethers, upgrades } = require("hardhat");
+const {expect} = require("chai");
 
 async function main() {
-    const DriftManiaClub = await ethers.getContractFactory("DriftManiaClub");
-    const token = await upgrades.deployProxy(DriftManiaClub, []);
-    await token.deployed();
-    console.log("Token deployed to:", token.address);
+    const DMCToken = await ethers.getContractFactory("DMCToken");
+    const token = await upgrades.deployProxy(DMCToken, []);
+
+    const deployedToken = await token.deployed();
+    const ownerBalance = await deployedToken.balanceOf(owner.address);
+    const totalSupply = await deployedToken.totalSupply();
+
+    console.log("Token deployed to:", deployedToken.address);
+    console.log("Token Owner balance:", ownerBalance);
+    console.log("Token total supply:", totalSupply);
 }
 
 main()
