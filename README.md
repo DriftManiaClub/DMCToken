@@ -12,3 +12,5 @@ npx hardhat node
 npx hardhat run scripts/deploy.js
 npx hardhat verify SMART_CONTRACT_ADDRESS_GOES_HERE
 ```
+
+
