@@ -9,15 +9,10 @@ module.exports = {
     hardhat: {
     },
     matic: {
-      url: "https://rpc-mumbai.maticvigil.com",
-      accounts: {
-        mnemonic: process.env.MNEMONIC,
-        path: "m/44'/60'/0'/0",
-        initialIndex: 0,
-        count: 12,
-        passphrase: "",
-      },
-    }
+      url: 'https://rpc-mumbai.maticvigil.com',
+      accounts: { mnemonic: process.env.MNEMONIC },
+      timeout: 40000,
+    },
   },
   etherscan: {
     apiKey: process.env.POLYGONSCAN_API_KEY
