@@ -4,9 +4,13 @@ require("@nomiclabs/hardhat-etherscan");
 require('@openzeppelin/hardhat-upgrades');
 
 module.exports = {
-  defaultNetwork: "hardhat",
+  defaultNetwork: "goerli",
   networks: {
     hardhat: {
+    },
+    goerli: {
+      url: `https://eth-goerli.alchemyapi.io/v2/${process.env.ALCHEMY_API_KEY}`,
+      accounts: [process.env.GOERLI_PRIVATE_KEY],
     },
     mumbai: {
       url: 'https://mumbai.polygonscan.com',
@@ -16,6 +20,7 @@ module.exports = {
   },
   etherscan: {
     apiKey: {
+      goerli: process.env.GOERLI_API_KEY,
       polygon:process.env.POLYGONSCAN_API_KEY,
       polygonMumbai: process.env.POLYGONSCAN_API_KEY
     }
