@@ -4,18 +4,21 @@ require("@nomiclabs/hardhat-etherscan");
 require('@openzeppelin/hardhat-upgrades');
 
 module.exports = {
-  defaultNetwork: "matic",
+  defaultNetwork: "mumbai",
   networks: {
     hardhat: {
     },
-    matic: {
+    mumbai: {
       url: 'https://mumbai.polygonscan.com',
       accounts: { mnemonic: process.env.MNEMONIC },
       timeout: 40000,
     },
   },
   etherscan: {
-    apiKey: process.env.POLYGONSCAN_API_KEY
+    apiKey: {
+      polygon:process.env.POLYGONSCAN_API_KEY,
+      polygonMumbai: process.env.POLYGONSCAN_API_KEY
+    }
   },
   solidity: {
     version: "0.8.17",
