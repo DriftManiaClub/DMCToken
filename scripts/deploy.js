@@ -1,7 +1,9 @@
 const { ethers, upgrades } = require("hardhat");
-const {expect} = require("chai");
 
 async function main() {
+
+    const [owner] = await ethers.getSigners();
+
     const DMCToken = await ethers.getContractFactory("DMCToken");
     const token = await upgrades.deployProxy(DMCToken, []);
 
