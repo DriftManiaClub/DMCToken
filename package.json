@@ -1,40 +1,10 @@
 {
-  "dependencies": {
-    "@openzeppelin/contracts": "^4.7.3",
-    "@openzeppelin/contracts-upgradeable": "^4.7.3",
-    "@openzeppelin/truffle-upgrades": "^1.16.0",
-    "@truffle/hdwallet-provider": "^2.0.14",
-    "dotenv": "^16.0.2",
-    "openzeppelin-solidity": "4.6.0"
-  },
-  "name": "dmctoken",
-  "version": "1.0.0",
-  "main": "truffle-config.js",
-  "directories": {
-    "test": "test"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/DriftManiaClub/DMCToken.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/DriftManiaClub/DMCToken/issues"
-  },
-  "homepage": "https://github.com/DriftManiaClub/DMCToken#readme",
-  "description": "",
+  "name": "hardhat-project",
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "^2.0.0",
-    "add": "^2.0.6",
-    "hardhat": "^2.11.2",
-    "install": "^0.13.0",
-    "npm": "^8.19.2",
-    "truffle-plugin-verify": "^0.5.28",
-    "yarn": "^1.22.19"
+    "hardhat": "^2.11.2"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts-upgradeable": "^4.7.3"
   }
 }
