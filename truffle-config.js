@@ -65,6 +65,13 @@ module.exports = {
       timeoutBlocks: 10000,
       skipDryRun: true
     },
+    matic_main: {
+      provider: () => new HDWalletProvider(mnemonic, `https://rpc-mumbai.maticvigil.com`),
+      network_id: 80001,
+      confirmations: 1,
+      timeoutBlocks: 10000,
+      skipDryRun: true
+    },
   },
 
   // Set default mocha options here, use special reporters etc.
