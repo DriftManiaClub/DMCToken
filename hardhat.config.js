@@ -9,7 +9,7 @@ module.exports = {
     hardhat: {
     },
     matic: {
-      url: 'https://rpc-mumbai.maticvigil.com',
+      url: 'https://mumbai.polygonscan.com',
       accounts: { mnemonic: process.env.MNEMONIC },
       timeout: 40000,
     },
