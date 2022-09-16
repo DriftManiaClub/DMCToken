@@ -1,0 +1,27 @@
+{
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.7.3",
+    "openzeppelin-solidity": "4.6.0"
+  },
+  "name": "dmctoken",
+  "version": "1.0.0",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DriftManiaClub/DMCToken.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DriftManiaClub/DMCToken/issues"
+  },
+  "homepage": "https://github.com/DriftManiaClub/DMCToken#readme",
+  "description": ""
+}
